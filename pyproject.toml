@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "s3-uploader"
+name = "s3-loader"
 version = "1.0.0"
 description = "wrapper script for uploading files and dirs to s3"
 authors = ["phil-bell <philhabell@gmail.com>"]
@@ -12,7 +12,7 @@ typer = "^0.3.2"
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
-s3-uploader = "s3_uploader.main:app"
+s3-uploader = "s3_loader.main:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

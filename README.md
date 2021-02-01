@@ -1,9 +1,9 @@
-# `s3-uploader`
+# `s3-loader`
 
 **Usage**:
 
 ```console
-$ s3-uploader [OPTIONS] COMMAND [ARGS]...
+$ s3-loader [OPTIONS] COMMAND [ARGS]...
 ```
 
 **Options**:
@@ -19,12 +19,12 @@ $ s3-uploader [OPTIONS] COMMAND [ARGS]...
 * `upload-dir`
 * `upload-file`
 
-## `s3-uploader auth`
+## `s3-loader auth`
 
 **Usage**:
 
 ```console
-$ s3-uploader auth [OPTIONS] AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
+$ s3-loader auth [OPTIONS] AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 ```
 
 **Arguments**:
@@ -36,12 +36,12 @@ $ s3-uploader auth [OPTIONS] AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 
 * `--help`: Show this message and exit.
 
-## `s3-uploader clear-bucket`
+## `s3-loader clear-bucket`
 
 **Usage**:
 
 ```console
-$ s3-uploader clear-bucket [OPTIONS] BUCKETNAME
+$ s3-loader clear-bucket [OPTIONS] BUCKETNAME
 ```
 
 **Arguments**:
@@ -52,12 +52,12 @@ $ s3-uploader clear-bucket [OPTIONS] BUCKETNAME
 
 * `--help`: Show this message and exit.
 
-## `s3-uploader upload-dir`
+## `s3-loader upload-dir`
 
 **Usage**:
 
 ```console
-$ s3-uploader upload-dir [OPTIONS] PATH BUCKETNAME
+$ s3-loader upload-dir [OPTIONS] PATH BUCKETNAME
 ```
 
 **Arguments**:
@@ -69,12 +69,12 @@ $ s3-uploader upload-dir [OPTIONS] PATH BUCKETNAME
 
 * `--help`: Show this message and exit.
 
-## `s3-uploader upload-file`
+## `s3-loader upload-file`
 
 **Usage**:
 
 ```console
-$ s3-uploader upload-file [OPTIONS] LOCAL_FILE BUCKET S3_FILE
+$ s3-loader upload-file [OPTIONS] LOCAL_FILE BUCKET S3_FILE
 ```
 
 **Arguments**:
