@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "s3-uploader"
+version = "1.0.0"
+description = "wrapper script for uploading files and dirs to s3"
+authors = ["phil-bell <philhabell@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.12"
+boto3 = "^1.16.63"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+s3-uploader = "s3_uploader.main:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
