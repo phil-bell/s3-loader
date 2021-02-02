@@ -50,11 +50,11 @@ def upload_dir(
     bucket_name: str = typer.Option(..., help="Your bucket name"),
 ):
     for root, dirs, files in os.walk(path):
-        root = root.replace(path, "")
-        if root:
-            root += "/"
+        s3_path = root.replace(path, "")
+        if s3_path:
+            s3_path += "/"
         for file in files:
-            upload_file(os.path.join(root, file), bucket_name, f"{root}{file}")
+            upload_file(os.path.join(root, file), bucket_name, f"{s3_path}{file}")
     print("Upload complete 🚀")
 
 
