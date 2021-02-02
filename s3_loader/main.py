@@ -49,11 +49,11 @@ def upload_dir(
     path: str = typer.Option(..., help="Path to your directory"),
     bucket_name: str = typer.Option(..., help="Your bucket name"),
 ):
-    if path[-1] == "/":
-        path = path[:-1]
     for root, dirs, files in os.walk(path):
+        if root[-1] == "/":
+            root = root[:-1]
         for file in files:
-            upload_file(os.path.join(root, file), bucket_name, f"{dirs}/{file}")
+            upload_file(os.path.join(root, file), bucket_name, f"{root}/{file}")
     print("Upload complete 🚀")
 
 
