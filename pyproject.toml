@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "s3-loader"
-version = "1.1.5"
+version = "1.1.6"
 description = "wrapper script for uploading files and dirs to s3"
 authors = ["phil-bell <philhabell@gmail.com>"]
 license = "GNU General Public License"
@@ -13,6 +13,7 @@ readme = "README.md"
 python = "^3.6.12"
 boto3 = "^1.16.63"
 typer = "^0.3.2"
+python-magic = "^0.4.20"
 
 [tool.poetry.dev-dependencies]
 black = {version = "^20.8b1", allow-prereleases = true}

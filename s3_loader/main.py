@@ -1,6 +1,7 @@
 import os
 import typer
 import boto3
+import magic
 import pickle
 from botocore.exceptions import NoCredentialsError
 
@@ -36,7 +37,12 @@ def upload_file(
             aws_secret_access_key=creds["secret"],
         )
         try:
-            s3.upload_file(local_file, bucket, s3_file)
+            s3.upload_file(
+                Filename=local_file,
+                Bucket=bucket,
+                Key=s3_file,
+                ExtraArgs={"ContentType": magic.from_file(local_file, mime=True)},
+            )
             print(f"File uploaded: {s3_file}")
         except FileNotFoundError:
             print("ERROR: file not found")
