@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "s3-loader"
-version = "1.0.2"
+version = "1.1.0"
 description = "wrapper script for uploading files and dirs to s3"
 authors = ["phil-bell <philhabell@gmail.com>"]
 license = "GNU General Public License"

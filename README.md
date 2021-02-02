@@ -1,10 +1,5 @@
 # `s3-loader`
 
-**Install**
-```console
-pip install s3-loader
-```
-
 **Usage**:
 
 ```console
@@ -19,46 +14,40 @@ $ s3-loader [OPTIONS] COMMAND [ARGS]...
 
 **Commands**:
 
-* `auth`: authenticate with your aws access key and...
-* `clear-bucket`: delete everything in an s3 bucket
+* `auth`: to set aws credetials
+* `empty-bucket`: delete everything in an s3 bucket
 * `upload-dir`: upload an entire directory to s3
 * `upload-file`: upload a single file to s3
 
 ## `s3-loader auth`
 
-authenticate with your aws access key and secret
+to set aws credetials
 
 **Usage**:
 
 ```console
-$ s3-loader auth [OPTIONS] [AWS_ACCESS_KEY_ID] [AWS_SECRET_ACCESS_KEY]
+$ s3-loader auth [OPTIONS]
 ```
-
-**Arguments**:
-
-* `[AWS_ACCESS_KEY_ID]`: Your aws access key  [default: ]
-* `[AWS_SECRET_ACCESS_KEY]`: Your aws secret acess ket  [default: ]
 
 **Options**:
 
+* `--aws-access-key-id TEXT`: Your aws access key  [required]
+* `--aws-secret-access-key TEXT`: Your aws secret acess key  [required]
 * `--help`: Show this message and exit.
 
-## `s3-loader clear-bucket`
+## `s3-loader empty-bucket`
 
 delete everything in an s3 bucket
 
 **Usage**:
 
 ```console
-$ s3-loader clear-bucket [OPTIONS] [BUCKET_NAME]
+$ s3-loader empty-bucket [OPTIONS]
 ```
-
-**Arguments**:
-
-* `[BUCKET_NAME]`: Your bucket name  [default: ]
 
 **Options**:
 
+* `--bucket-name TEXT`: Your bucket name  [required]
 * `--help`: Show this message and exit.
 
 ## `s3-loader upload-dir`
@@ -68,16 +57,13 @@ upload an entire directory to s3
 **Usage**:
 
 ```console
-$ s3-loader upload-dir [OPTIONS] [PATH] [BUCKET_NAME]
+$ s3-loader upload-dir [OPTIONS]
 ```
-
-**Arguments**:
-
-* `[PATH]`: Path to your directory  [default: ]
-* `[BUCKET_NAME]`: Your bucket name  [default: ]
 
 **Options**:
 
+* `--path TEXT`: Path to your directory  [required]
+* `--bucket-name TEXT`: Your bucket name  [required]
 * `--help`: Show this message and exit.
 
 ## `s3-loader upload-file`
@@ -87,15 +73,12 @@ upload a single file to s3
 **Usage**:
 
 ```console
-$ s3-loader upload-file [OPTIONS] [LOCAL_FILE] [BUCKET] [S3_FILE]
+$ s3-loader upload-file [OPTIONS]
 ```
-
-**Arguments**:
-
-* `[LOCAL_FILE]`: Local file name  [default: ]
-* `[BUCKET]`: Your bucket name  [default: ]
-* `[S3_FILE]`: Name the file will use on s3  [default: ]
 
 **Options**:
 
+* `--local-file TEXT`: Local file name  [required]
+* `--bucket TEXT`: Your bucket name  [required]
+* `--s3-file TEXT`: Name the file will use on s3  [required]
 * `--help`: Show this message and exit.
