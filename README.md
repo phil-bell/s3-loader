@@ -1,5 +1,10 @@
 # `s3-loader`
 
+**Install**
+```console
+pip install s3-loader
+```
+
 **Usage**:
 
 ```console
